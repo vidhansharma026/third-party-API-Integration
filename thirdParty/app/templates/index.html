@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>HTML Table</h2>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Mobile</th>
+    <th>Address</th>
+    <th>College</th>
+    <th>Degree</th>
+    <th>Total Amount</th>
+    <th>Paid Amount</th>
+    <th>Due Amount</th>
+    <th>Course</th>
+  </tr>
+  {% for i in data %}
+  <tr>
+    <td>{{i.sname}}</td>
+    <td>{{i.semail}}</td>
+    <td>{{i.smobile}}</td>
+    <td>{{i.saddress}}</td>
+    <td>{{i.scollege}}</td>
+    <td>{{i.sdegree}}</td>
+    <td>{{i.total_amount}}</td>
+    <td>{{i.paid_amount}}</td>
+    <td>{{i.due_amount}}</td>
+    <td>{{i.scourse}}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>
+
+{% comment %}         "url": "https://princestudentapi.onrender.com/AddStudent//68/",
+        "sname": "Veer",
+        "semail": "veer@gmail.com",
+        "smobile": "9696969696",
+        "saddress": "indore",
+        "scollege": "MB Khalsa",
+        "sdegree": "Bsc",
+        "total_amount": 45000,
+        "paid_amount": 25000,
+        "due_amount": 20000.0,
+        "scourse": "https://princestudentapi.onrender.com/Course//13/" {% endcomment %}
